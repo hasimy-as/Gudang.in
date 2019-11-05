@@ -1,0 +1,29 @@
+{
+  "name": "gudang.in",
+  "version": "1.0.0",
+  "description": "Aplikasi Data Barang Gudang, menggunakan Node.js dengan database MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasimy-as/Gudang.in.git"
+  },
+  "author": "Hasimy, Ramachalvi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hasimy-as/Gudang.in/issues"
+  },
+  "homepage": "https://github.com/hasimy-as/Gudang.in#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mysql": "^2.17.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-icon": "^2.3.3"
+  }
+}

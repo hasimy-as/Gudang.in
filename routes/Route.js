@@ -6,7 +6,6 @@ const Route = express.Router();
 
 Route.get('/login', (req, res) => res.render('login'));
 Route.get('/register', (req, res) => res.render('register'));
-Route.get('/beranda', (req, res) => res.render('berandaUtama'));
 
 Route.post('/authlog', (req, res) => {
   let email = req.body.email;
@@ -42,7 +41,25 @@ Route.post('/authreg', (req, res) => {
   });
 });
 
-Route.get('/', (req, res) => res.render('beranda'));
+Route.get('/beranda', (req, res) => {
+  var { nama } = req.params;
+  const sql = 'SELECT user.nama FROM user';
+
+  if (req.session.loggedin) {
+    res.render('berandaUtama');
+  } else {
+    alert('Login dulu!');
+    res.redirect('/');
+  }
+});
+
+Route.get('/', (req, res) => {
+  if (req.session.loggedin) {
+    res.redirect('/beranda');
+  } else {
+    res.render('beranda');
+  }
+});
 
 Route.get('/logout', (req, res) => {
   req.session.destroy(err => {

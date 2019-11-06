@@ -6,6 +6,7 @@ const Route = express.Router();
 
 Route.get('/login', (req, res) => res.render('login'));
 Route.get('/register', (req, res) => res.render('register'));
+Route.get('/beranda', (req, res) => res.render('berandaUtama'));
 
 Route.post('/authlog', (req, res) => {
   let email = req.body.email;
@@ -17,9 +18,9 @@ Route.post('/authlog', (req, res) => {
       if (rows.length > 0) {
         req.session.loggedin = true;
         req.session.email = email;
-        res.redirect('//');
+        res.redirect('/beranda');
       } else {
-        alert('Wrong credentials!');
+        alert('Data anda salah!');
         res.redirect('/login');
       }
       res.end();
@@ -41,12 +42,12 @@ Route.post('/authreg', (req, res) => {
   });
 });
 
-Route.get('//', (req, res) => res.render('beranda'));
+Route.get('/', (req, res) => res.render('beranda'));
 
 Route.get('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) throw err;
-    res.redirect('/login');
+    res.redirect('/');
   });
 });
 

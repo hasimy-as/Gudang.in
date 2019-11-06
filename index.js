@@ -7,7 +7,7 @@ import morgan from 'morgan';
 const Index = express();
 const PORT = 3000;
 
-Index.use(morgan('combined'));
+Index.use(morgan('dev'));
 Index.set('view engine', 'ejs');
 Index.use(bodyParser.urlencoded({ extended: false }));
 Index.use(bodyParser.json());

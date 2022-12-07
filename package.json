@@ -18,10 +18,10 @@
   "homepage": "https://github.com/hasimy-as/Gudang.in#readme",
   "dependencies": {
     "alert-node": "^2.0.1",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "ejs": "^2.7.1",
     "esm": "^3.2.25",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-session": "^1.17.0",
     "morgan": "^1.9.1",
     "mysql": "^2.17.1",
